@@ -20,13 +20,13 @@ footer-links:
   dribbble:
   email:
   facebook:
-  flickr:
-  github: barryclark/jekyll-now
+  flickr: https://www.flickr.com/photos/43464051@N02/
+  github: https://github.com/col42dev
   instagram:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: jekyllrb
+  twitter: @colinmoore42
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
 
