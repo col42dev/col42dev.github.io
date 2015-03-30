@@ -17,24 +17,29 @@ Bower works by fetching and installing packages from all over, taking care of hu
 
 Ensure node package manager is updated.
 
-```>npm install -g npm```
+    >npm install -g npm
 
 Use npm to install Yeoman, Grunt and Bower
 
-```>npm install -g yo grunt-cli bower```
+    >npm install -g yo grunt-cli bower
 
 Use npm to install angular generator
 
-```>npm install -g generator-angular```
+    >npm install -g generator-angular
 
 Use Yeoman to create an Angular app framework.
 
-```>yo angular```
+    >yo angular
 
 Use bower to add angular bootstrap dependancy.
 
-```>bower install angular-bootstrap --save```
+    >bower install angular-bootstrap --save
 
+Use grunt to test and run the app
+
+
+    >grunt test
+    >grunt serve
 
 
 
