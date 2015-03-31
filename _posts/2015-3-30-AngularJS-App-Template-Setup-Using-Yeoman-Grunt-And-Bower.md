@@ -41,5 +41,13 @@ Use grunt to test and run the app
     >grunt test
     >grunt serve
 
+Yeoman can also be used to create Angular scripts.
 
-
+    >yo angular:controller user
+    >yo angular:view user
+    >yo angular:route myroute //Generates a controller and view, and configures a route in app/scripts/app.js connecting them
+    >yo angular:directive myDirective
+    >yo angular:route myroute
+    >yo angular:filter myFilter
+    >yo angular:service myService
+    >yo angular:decorator serviceName
