@@ -7,12 +7,14 @@ title: Linux MongoDB EC2 install
 Install MongoDB for 64 bit linux [http://docs.mongodb.org/manual/tutorial/install-mongodb-on-linux/](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-linux/)
 
 
-    **$ curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.0.4.tgz**
+>**$ curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.0.4.tgz**
+
       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                      Dload  Upload   Total   Spent    Left  Speed
     100 38.4M  100 38.4M    0     0  8460k      0  0:00:04  0:00:04 --:--:-- 8461k
 
-    **$ tar -zxvf mongodb-linux-x86_64-3.0.4.tgz**
+>**$ tar -zxvf mongodb-linux-x86_64-3.0.4.tgz**
+
     mongodb-linux-x86_64-3.0.4/README
     mongodb-linux-x86_64-3.0.4/THIRD-PARTY-NOTICES
     mongodb-linux-x86_64-3.0.4/GNU-AGPL-3.0
@@ -30,25 +32,29 @@ Install MongoDB for 64 bit linux [http://docs.mongodb.org/manual/tutorial/instal
     mongodb-linux-x86_64-3.0.4/bin/mongos
     mongodb-linux-x86_64-3.0.4/bin/mongo
 
-    **$ mkdir -p mongodb**
-    **$ cp -R -n mongodb-linux-x86_64-3.0.4/ mongodb**
+>**$ mkdir -p mongodb**
+
+>**$ cp -R -n mongodb-linux-x86_64-3.0.4/ mongodb**
 
 
 Add bin dir to path
 
-    **$ echo $PATH**
+>**$ echo $PATH**
+
     /usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/bin
 
-    **$ export PATH=$PATH:/home/ec2-user/nginx/html/mongodb/mongodb-linux-x86_64-3.0.4/bin**
+>**$ export PATH=$PATH:/home/ec2-user/nginx/html/mongodb/mongodb-linux-x86_64-3.0.4/bin**
 
 
-    **$ echo $PATH**
+>**$ echo $PATH**
+
     /usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/bin:/home/ec2-user/nginx/html/mongodb/mongodb-linux-x86_64-3.0.4/bin
 
 
 Start instance
 
-    **$ mongod --httpinterface --rest**
+>**$ mongod --httpinterface --rest**
+
     2015-07-13T10:21:42.218+0000 I JOURNAL  [initandlisten] journal dir=/data/db/journal
     2015-07-13T10:21:42.219+0000 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
     2015-07-13T10:21:42.236+0000 I JOURNAL  [durability] Durability thread started
@@ -62,14 +68,14 @@ Start instance
     2015-07-13T10:21:42.377+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
 
 
-If the default data directory is not accessible ...
+Or if the default data directory is not accessible ...
 
-    **$ /bin/mongod --dbpath /Users/colinmoore/data --httpinterface --rest**
-    
+>**$ /bin/mongod --dbpath /Users/colinmoore/data --httpinterface --rest**
+
 
 Open Mongo shell
 
-    **$ mongodb-osx-x86_64-3.0.4/bin/mongo**
+>**$ mongodb-osx-x86_64-3.0.4/bin/mongo**
 
     > db.accounts.insert({x:10})
     WriteResult({ "nInserted" : 1 })
