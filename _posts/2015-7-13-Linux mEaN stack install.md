@@ -1,9 +1,7 @@
-
 ---
 layout: post
 title: Linux mEaN stack install
 ---
-
 
 Install instructions for NodeJS and ExpressJS on an AWS Linux EC2 instance. How to launch node app as a nohup.
 
